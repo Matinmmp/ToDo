@@ -7,10 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="styles/output.css">
+    <link rel="stylesheet" href="styles/styles.css">
     <title>Document</title>
 </head>
 
-<body>
+<body class="relative h-[100vh]">
     <nav class="bg-primary-content ] shadow-lg shadow-gray-900">
         <div class="w-[90%] mx-auto py-1">
             <ul class="flex ">
@@ -25,20 +26,21 @@
         <form>
             <div class="mb-8">
                 <label class="text-lg" for="">Title : </label>
-                <input id="title" required class="input input-bordered input-primary w-full mt-2" />
+                <input id="title" placeholder="Title..." required class="input input-bordered input-primary w-full mt-2" />
             </div>
             <div class="mb-8">
                 <label class="text-lg" for="">Decription : </label>
-                <input id="decription" required class="input input-bordered input-primary w-full mt-2" />
+                <input id="decription" placeholder="Description..." required class="input input-bordered input-primary w-full mt-2" />
             </div>
             <div>
                 <label class="text-lg" for="">Date : </label>
                 <input id="date" required type="date" class="input input-bordered input-primary w-full mt-2" />
             </div>
-            <button id="addTodo" class="btn btn-primary mt-14 w-full" >Submit</button>
+            <button id="addTodo" class="btn btn-primary mt-14 w-full">Submit</button>
         </form>
     </section>
 
+  
 
     <script src="scripts/Home.js"></script>
 </body>

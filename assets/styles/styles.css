@@ -1,8 +1,4 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-/* #alert{
+#alert{
     position: absolute;
     bottom: 1rem;
     left: 1rem;
@@ -23,4 +19,4 @@
     100%{
         transform: translateX(-20rem);
     }
-} */
+}
