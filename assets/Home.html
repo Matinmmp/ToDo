@@ -11,8 +11,36 @@
 </head>
 
 <body>
+    <nav class="bg-primary-content ] shadow-lg shadow-gray-900">
+        <div class="w-[90%] mx-auto py-1">
+            <ul class="flex ">
+                <li class="btn btn-primary btn-outline mx-1 border-none"><a href="#">Home</a></li>
+                <li class="btn btn-primary btn-outline mx-1 border-none"><a href="./Todo.html">ToDos</a></li>
+            </ul>
+        </div>
+    </nav>
 
-    <button class="btn btn-outline btn-primary">sdfa</button>
+    <section class=" w-[90%] sm:w-[90%] md:w-[75%] lg:w-[50%] xl:w-[40%] rounded-3xl p-6 bg-base-300 mx-auto mt-24
+    " style="box-shadow: 0 0 20px -10px  rgb(56,189,248)">
+        <form>
+            <div class="mb-8">
+                <label class="text-lg" for="">Title : </label>
+                <input id="title" required class="input input-bordered input-primary w-full mt-2" />
+            </div>
+            <div class="mb-8">
+                <label class="text-lg" for="">Decription : </label>
+                <input id="decription" required class="input input-bordered input-primary w-full mt-2" />
+            </div>
+            <div>
+                <label class="text-lg" for="">Date : </label>
+                <input id="date" required type="date" class="input input-bordered input-primary w-full mt-2" />
+            </div>
+            <button id="addTodo" class="btn btn-primary mt-14 w-full" >Submit</button>
+        </form>
+    </section>
+
+
+    <script src="scripts/Home.js"></script>
 </body>
 
 </html>
