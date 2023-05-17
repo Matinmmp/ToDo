@@ -4,7 +4,7 @@
   "description": "��#\u0000 \u0000T\u0000o\u0000D\u0000o\u0000\r\u0000 \u0000",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "npx tailwindcss -i ./assets/styles/input.css -o ./assets/styles/output.css --watch"
   },
   "keywords": [],
   "author": "",
