@@ -14,7 +14,6 @@ class ToDo {
         this.title = title;
         this.description = description;
         this.dueDate = `${new Date(dueDate).getTime()}`;
-
     }
 
     async addToDo() {
@@ -38,8 +37,7 @@ class ToDo {
 
     async checkedTodo(id) {
         try {
-            const response = await fetch(`${this.url}/${id}`);
-            const data = await response.json();
+            const data = await this.getTodoById(id);
             data.checked = !data.checked;
             await fetch(`${this.url}/${id}`, {
                 method: 'put',
@@ -59,8 +57,7 @@ class ToDo {
                 method: 'DELETE',
                 headers: {
                     'Content-Type': 'application/json'
-                },
-                
+                },               
             })
         } catch (error) {
             console.log(error);
@@ -70,10 +67,39 @@ class ToDo {
     async getAllDate() {
         try {
             const response = await fetch(this.url);
-            const s = await response.json()
+            const s = await response.json();
             return s;
         } catch {
             console.log("Error");
+        }
+    }
+
+    async getTodoById(id){
+        try {
+            const response = await fetch(`${this.url}/${id}`);
+            const data = await response.json();
+            return data
+        } catch (error) {
+            console.log("Fa");
+        }
+    }
+    
+    async editeTodo(id,obj){
+        try {
+            const data = await this.getTodoById(id);
+            console.log(data);
+            data.title = obj.title;
+            data.description = obj.description;
+            data.updateedAt = obj.dueDate;
+            fetch(`${this.url}${id}`,{
+                method: 'PUT',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body:JSON.stringify(data)   
+            });
+        } catch (error) {
+            
         }
     }
 }
